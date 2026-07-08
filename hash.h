@@ -67,3 +67,35 @@ void remove_galpao(Galpao g, int id_remover) {
 	}
 	printf("Erro: A caixa %d nao esta no galpao para ser removida.\n", id_remover);
 }
+
+void imprime_galpao(Galpao g) {
+	for(int i=0; i < g->capacidade; i++) {
+		printf("prateleira %d:\n", i);
+		List prateleira_certa = g->prateleiras[i];
+		Object detetive = prateleira_certa->inicio;
+		if(detetive == NULL){
+			printf("	vazia\n");
+		}
+		while(detetive != NULL) {
+			detetive->print(detetive, i); 
+			detetive = detetive->proximo;
+		}
+	}
+	printf("\n");
+}
+
+void limpa_galpao(Galpao g) {
+	for(int i=0; i < g->capacidade; i++) {
+		List prateleira_certa = g->prateleiras[i];
+		prateleira_certa->clear(prateleira_certa);
+	}
+}
+
+void destroi_galpao(Galpao g) {
+	limpa_galpao(g);
+	for(int i=0; i < g->capacidade; i++) {
+		free(g->prateleiras[i]);
+	}
+	free(g->prateleiras);
+	free(g);
+}
