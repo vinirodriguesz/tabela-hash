@@ -14,10 +14,10 @@ int main() {
     int id_temp;
     char desc_temp[50];
     while (opcao != 4) {
-        printf("guardar nova caixa (Cadastrar)\n");
-        printf("buscar uma caixa\n");
-        printf("remover uma caixa\n");
-        printf("sair\n");
+        printf("1 guardar nova caixa (Cadastrar)\n");
+        printf("2 buscar uma caixa\n");
+        printf("3 remover uma caixa\n");
+        printf("4 sair\n");
         scanf("%d", &opcao);
         switch (opcao) {
             case 1:
