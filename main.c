@@ -35,7 +35,8 @@ int main() {
                 Object achado = busca_galpao(meu_galpao, id_temp);
                 if (achado != NULL) {
                     printf("caixa encontrada, detalhes da caixa:\n");
-                    achado->print(achado, 0);
+                    int numero_da_prateleira = (id_temp % 5);
+                    achado->print(achado, numero_da_prateleira);
                 }
                 break;
             case 3:
