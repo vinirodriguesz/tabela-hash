@@ -33,3 +33,4 @@ Object New_Coisa(int id, char *descricao, int tipo){
 	return novo;
 }
 
+//Vinicius Dantas Rodrigues (comment just to commit changes)
