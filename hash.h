@@ -99,3 +99,4 @@ void destroi_galpao(Galpao g) {
 	free(g->prateleiras);
 	free(g);
 }
+//created by Vini Rodiguesz
