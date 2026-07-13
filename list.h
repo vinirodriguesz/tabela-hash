@@ -10,7 +10,7 @@ typedef struct StructLista {
     void (*del)();
     Object (*get)();
 } StructLista;
-
+//Vini Rodriguesz
 typedef StructLista* List;
 
 void lista_print(List lista, void (*funcao_print)()) {
