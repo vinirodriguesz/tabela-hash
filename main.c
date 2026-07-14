@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "hash.h"
-
+//created by Vini Rodriguesz
 int inspetor_da_coisa(Object caixa){
 	Coisa* c = (Coisa*)caixa->dado;
 	return c->id;
